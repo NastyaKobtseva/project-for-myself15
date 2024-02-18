@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+@import "./components/header";
+@import "./components/welcome";
+@import "./components/choose";
+@import "./components/price";
+@import "./components/video";
+@import "./components/information";
+@import "./components/gallery";
+@import "./components/coating";
+@import "./components/quote";
+@import "./components/get";
+@import "./components/work";
+@import "./components/footer";
+
+@media (max-width: 848px) {
+    .container {
+        width: 830px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 460px;
+    }
+}

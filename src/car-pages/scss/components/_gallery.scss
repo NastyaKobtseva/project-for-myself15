@@ -1,0 +1,63 @@
+.gallery {
+    background: #343436;
+    &__content {
+        padding: 100px 0 100px 0;
+    }
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 45px 50px;
+    &__title {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 59.8px;
+    }
+}
+.arrows {
+    display: flex;
+    gap: 10px;
+    &__black {
+        cursor: pointer;
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(1.1) translateX(-10px);
+        }
+    }
+    &__white {
+        cursor: pointer;
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(1.1) translateX(10px);
+        }
+    }
+}
+.photos {
+    overflow: hidden;
+    &__content {
+        display: flex;
+        gap: 10px;
+        animation: scrollPhoto 25s linear infinite;
+    }
+    &__car {
+        width: 300px;
+        height: 292px;
+    }
+}
+@keyframes scrollPhoto {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-940px);
+    }
+    66% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

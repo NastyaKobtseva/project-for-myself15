@@ -1,0 +1,212 @@
+.information {
+    background: #2e2e30;
+    background-image: url('../image/chapter-five/Shape.svg');
+    background-repeat: no-repeat;
+    background-position: top 0 right 0;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 150px 0 150px 0;
+        gap: 5px;
+    }
+}
+.points {
+    &__title {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 59.8px;
+        padding: 0 0 40px 0;
+    }
+    &__menu-item {
+        color: #FFF;
+        transition: transform 0.3s linear, color 0.3s linear;
+        &:hover {
+            transform: translateX(10px);
+            color: #F2C938;
+        }
+    }
+    &__menu-link {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        transition: color 0.3s linear;
+        &:hover {
+            color: #F2C938;
+        }
+    }
+}
+.package {
+    &__position {
+        display: flex;
+        justify-content: center;
+        gap: 11px;
+    }
+    &__background {
+        padding: 25px;
+        gap: 10px;
+        border-radius: 15px;
+        background: #343436;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(0.98);
+        }
+        &:hover:before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-image: conic-gradient(transparent, transparent, transparent, #80ffdb);
+            animation: rotate 2s linear infinite;
+        }
+        &:hover:after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-image: conic-gradient(transparent, transparent, transparent, #6930c3);
+            animation: rotate 2s linear infinite;
+            animation-delay: -1s;
+        }
+    }
+    &__content {
+        text-align: center;
+        position: absolute;
+        inset: 5px;
+        z-index: 2;
+        border-radius: 16px;
+        background-color: #343436;
+        padding: 14px 14px 14px 14px;
+    }
+    &__content-silver {
+        color: #969696;
+        font-family: 'Ubuntu';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21.639px;
+        padding: 14px 0 15px 0;
+    }
+    &__content-silver-one {
+        padding: 2px 0 2px 0;
+    }
+    &__content-silver-three {
+        padding: 20px 0 16px 0;
+    }
+    &__content-price {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 48.688px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 54.098px;
+    }
+    &__content-crossed {
+        color: #616161;
+        text-align: center;
+        font-family: 'Ubuntu';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: line-through;
+    }
+    &__content-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__content-button {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        display: flex;
+        padding: 11px 25px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 5px;
+        background-color: #222224;
+        cursor: pointer;
+        border: none;
+        margin: 14px 0 0 0;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s linear, bg-color 0.3s ease;
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #1d1d1f;
+            border-radius: 5px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: translateX(100%);
+            transition: transform 0.5s linear;
+        }
+        &:hover::before {
+            transform: translateY(0);
+        }
+        &:hover {
+            animation: packageBtn 4s infinite alternate;
+        }
+    }
+}
+
+@keyframes packageBtn {
+    0% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateY(-10px);
+    }
+    95% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 848px) {
+    .information__content {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .points {
+        padding: 0 0 0 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .package__position {
+        flex-wrap: wrap;
+        margin: 30px 0 0 0;
+    }
+}

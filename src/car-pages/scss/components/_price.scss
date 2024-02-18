@@ -1,0 +1,202 @@
+.price {
+    background: #28282A;
+    padding: 122px 0 178px 0;
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+}
+.car {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 59.8px;
+        text-transform: capitalize;
+        padding: 0 0 20px 0;
+    }
+    &__subtitle {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        padding: 0 0 50px 0;
+    }
+    &__photos {
+        position: relative;
+        top: -180px;
+        left: 50px;
+    }
+    &__photos-content {
+        position: absolute;
+    }
+    &__photo-yellow {
+        width: 121px;
+        height: 121px;
+        position: absolute;
+    
+    }
+    &__photo {
+        width: 332px;
+        height: 460px;
+        position: absolute;
+        z-index: 1;
+    }
+    &__photo-black {
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        top: 297px;
+        left: 260px;
+    }
+}
+.book {
+    border-radius: 15px;
+    background: #343436;
+    &__content-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 50px;
+    }
+    &__content {
+        text-align: center;
+    }
+    &__text-ceramic {
+        color: #969696;
+        font-family: 'Ubuntu';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21.639px;
+        padding: 0 0 10px 0;
+    }
+    &__text-price {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 54.098px;
+    }
+    &__text-crossed {
+        color: #616161;
+        font-family: 'Ubuntu';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration-line: line-through;
+        padding: 0 0 10px 0;
+    }
+    &__subtext {
+        color: #969696;
+        font-family: 'Ubuntu';
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21.639px;
+        padding: 0 0 34px 0;
+    }
+    &__button {
+        border-radius: 5px;
+        background-color: #222224;
+        display: flex;
+        padding: 11px 25px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s linear, bg-color 0.3s ease;
+        &::before {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to right, #fbb92c, #f4fd46);
+            border-radius: 5px;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: transform 0.5s linear;
+        }
+        &:hover::before {
+            transform: translateY(0);
+        }
+        &:hover {
+            animation: bookBtn 4s infinite alternate;
+        }
+    }
+    &__line {
+        width: 0px;
+        height: 235.326px;
+    }
+}
+@keyframes bookBtn {
+    0% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateY(-10px);
+    }
+    95% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 848px) {
+    .car__photos {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .car__content-texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .car__subtitle {
+        font-size: 17px;
+    }
+    .book {
+        width: 290px;
+    }
+    .book__content-bg {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+    .book__line {
+        transform: rotate(90deg);
+    }
+    .car__photos {
+        display: none;
+    }
+}

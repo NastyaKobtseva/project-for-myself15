@@ -1,0 +1,53 @@
+.video {
+    background-image: url("../image/chapter-four/video.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 317px 0 0 0;
+}
+.info {
+    &__play {
+        margin: 0 0 191px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: play 3s linear infinite;
+        cursor: pointer;
+    }
+}
+@keyframes play {
+    0% {
+        transform: scale(1);
+    }
+    45% {
+        transform: scale(0.9);
+    }
+    95% {
+        transform: scale(1);
+    }
+}
+.eyes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 0 60px 0;
+    &__text {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        padding: 12px 30px 11px 20px;
+        background: #222224;
+    }
+    &__badge {
+        padding: 15px 19px 15px 18px;
+        border-radius: 0px 15px 0px 0px;
+        background: #F2C938;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

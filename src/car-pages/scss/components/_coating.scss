@@ -1,0 +1,174 @@
+.coating {
+    background: #222224;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 150px 0 150px 0;
+    }
+}
+.protects {
+    &__title {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 59.8px;
+        text-transform: uppercase;
+    }
+    &__text {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        padding: 20px 0 45px 0;
+    }
+}
+.card {
+    display: flex;
+    gap: 24px;
+    &__content {
+        display: flex;
+        width: 312px;
+        height: 547px;
+        padding: 33.065px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 39.677px;
+        border-radius: 15px;
+        background-color: #343436;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(0.98);
+        }
+        &:hover:before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-image: conic-gradient(transparent, transparent, transparent, #06ae00);
+            animation: rotateCard 2s linear infinite;
+        }
+        &:hover:after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-image: conic-gradient(transparent, transparent, transparent, #5c04ea);
+            animation: rotateCard 2s linear infinite;
+            animation-delay: -1s;
+        }
+    }
+}
+.fusion {
+    background-color: #343436;
+    position: absolute;
+    inset: 5px;
+    z-index: 2;
+    padding: 20px 20px 20px 20px;
+    &__title {
+        color: #FFF;
+        font-family: 'Ubuntu';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28.62px;
+        padding: 40px 0 6px 0;
+    }
+    &__line {
+        width: 100px;
+        height: 1.323px;
+        background: #F2C938;
+        margin: 0 0 41px 0;
+    }
+    &__button-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__button {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Ubuntu';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: capitalize;
+        padding: 15px 80px;
+        border-radius: 5px;
+        background: #222224;
+        border: none;
+        cursor: pointer;
+        margin: 20px 0 0 0;
+        transition: transform 0.3s linear;
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+@keyframes rotateCard {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.multi {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: translateX(10px);
+    }
+    &__text {
+        color: #969696;
+        font-family: 'Ubuntu';
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28.62px;
+        transition: color 0.3s linear;
+        &:hover {
+            color: #F2C938;
+        }
+    }
+}
+
+@media (max-width: 848px) {
+    .coating__content {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .protects {
+        text-align: center;
+    }
+    .protects__title {
+        font-size: 26px;
+    }
+    .protects__text {
+        font-size: 15px;
+    }
+    .protects__video {
+        width: 427px;
+        height: 259px;
+    }
+    .card {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
