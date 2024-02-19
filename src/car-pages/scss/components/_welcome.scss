@@ -161,6 +161,21 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .welcome__content {
+        flex-wrap: wrap;
+    }
+    .paragraph__title {
+        font-size: 55px;
+    }
+    .paragraph__button-mobile {
+        flex-wrap: wrap;
+    }
+    .customers {
+        display: none;
+    }
+}
+
 @media (max-width: 848px) {
     .welcome__content {
         align-items: flex-end;
@@ -169,6 +184,25 @@
     }
     .paragraph__title {
         font-size: 75px;
+    }
+}
+
+@media (max-width: 664px) {
+    .paragraph__title {
+        font-size: 55px;
+    }
+    .paragraph__line {
+        padding: 35px 0 0 0;
+    }
+    .paragraph__subtitle {
+        font-size: 12px;
+    }
+    .paragraph__button {
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+    .paragraph__mobile-link {
+        font-size: 20px;
     }
 }
 

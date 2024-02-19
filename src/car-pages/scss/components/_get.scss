@@ -83,6 +83,12 @@
     }
 }
 
+@media (max-width: 664px) {
+    .get__content-text {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 480px) {
     .get__content-title {
         font-size: 36px;

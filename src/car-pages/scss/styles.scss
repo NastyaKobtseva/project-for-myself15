@@ -21,9 +21,21 @@ a {
 @import "./components/work";
 @import "./components/footer";
 
+@media (max-width: 1000px) {
+    .container {
+        width: 980px;
+    }
+}
+
 @media (max-width: 848px) {
     .container {
         width: 830px;
+    }
+}
+
+@media (max-width: 664px) {
+    .container {
+        width: 644px;
     }
 }
 

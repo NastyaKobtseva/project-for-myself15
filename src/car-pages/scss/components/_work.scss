@@ -146,6 +146,15 @@
     }
 }
 
+@media (max-width: 664px) {
+    .our {
+        text-align: start;
+    }
+    .our__title {
+        font-size: 22px;
+    }
+}
+
 @media (max-width: 480px) {
     .art {
         display: flex;

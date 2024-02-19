@@ -204,6 +204,12 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .quote__content {
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 848px) {
     .quote__content {
         flex-wrap: wrap;

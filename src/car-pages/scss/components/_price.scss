@@ -166,6 +166,13 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .car__photos {
+        display: none;
+    }
+
+}
+
 @media (max-width: 848px) {
     .car__photos {
         display: none;

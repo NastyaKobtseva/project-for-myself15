@@ -60,6 +60,21 @@
     line-height: 150%;
 }
 
+@media (max-width: 1000px) {
+    .choose__content {
+        flex-wrap: wrap;
+    }
+    .choose__line {
+        display: none;
+    }
+    .window {
+        order: 2;
+    }
+    .us {
+        order: 1;
+    }
+}
+
 @media (max-width: 848px) {
     .window {
         order: 2;
@@ -72,6 +87,13 @@
     }
     .choose__line {
         display: none;
+    }
+}
+
+@media (max-width: 664px) {
+    .window {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 

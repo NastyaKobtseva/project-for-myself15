@@ -146,6 +146,12 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .coating__content {
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 848px) {
     .coating__content {
         flex-wrap: wrap;
